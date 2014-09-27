@@ -36,3 +36,20 @@ len(raw)                          # This tells you the character length of the
                                   # string
 
 ##############################################################################
+
+""" Now we need to do something with the this raw text, because it's one long
+string which is hard to work with."""
+
+sentences = sent_tokenize(raw)    # Divies raw string into a list of sentences.
+
+sentences[1]                      # What happens with this command?
+
+sentences[3:6]                    # What about this?
+
+sentsdivided = []                 # Instantiates an empty list to store results
+                                  # of for loop.
+
+for s in sentences:
+    sentsdivided.append(word_tokenize(s))
+        
+        
