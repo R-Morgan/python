@@ -66,7 +66,7 @@ list sentsdivided."""
 function to calculate the mean sentence length. We will build this up modularly
 from smaller functions"""
 
-def normtext (sents):
+def norm_text (sents):
 
     """ Defines function name and argument structure.  The function takes one
     argument called 'sents', which should a list of sentences."""
@@ -85,7 +85,7 @@ def normtext (sents):
 
     return(result)
    
-def meanlength(normed_sents):
+def mean_length(normed_sents):
     """ This function takes a normalised set of sentences and calculates the mean
     sentence length. """
 
@@ -98,14 +98,14 @@ def meanlength(normed_sents):
 
     mean = (words / sentences)
 
-    return(mean)                                    # Returns function value
+    return mean                                    # Returns function value
 
 
 """ What's really sweet about functions is that they allow you to do reuse code.
 Code reuse is a beautiful, beautiful thing! Next up, we'll construct a function
 to encode the raw text of a plaintext url."""
 
-def getTextFromURL(url):
+def get_text_from_url(url):
     response = request.urlopen(url)
     """ This executes a command to retrieve the file at that URL and stores the 
     result in a variable name. """
