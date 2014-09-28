@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# !/usr/bin/env python
 
 """ Before playing with this code, I'd *highly* recommend installing python 3
 and bpython, a very slick python interpreter that will make trying out the code
@@ -68,11 +68,11 @@ from smaller functions"""
 
 def normtext (sents):
 
-""" Defines function name and argument structure.  The function takes one
-argument called 'sent_tokens', which should a list of sentences."""
+    """ Defines function name and argument structure.  The function takes one
+    argument called 'sents', which should a list of sentences."""
 
     result = []        
-""" Initialises an empty list to store the output of the for loop  """
+    """ Initialises an empty list to store the output of the for loop  """
 
     for s in sents:
         lst = [w.lower() for w in s if w.isalpha()]
@@ -83,9 +83,11 @@ argument called 'sent_tokens', which should a list of sentences."""
         result.append(lst)
         """ Appends lst to the the empty vector above"""
 
-   return(result) 
+    return(result)
    
 def meanlength(normed_sents):
+    """ This function takes a normalised set of sentences and calculates the mean
+    sentence length. """
 
     lengths =  [len(sent) for sent in normed_sents] # Number of words in each
                                                     # sentence
@@ -96,4 +98,22 @@ def meanlength(normed_sents):
 
     mean = (words / sentences)
 
-    return(mean)
+    return(mean)                                    # Returns function value
+
+
+""" What's really sweet about functions is that they allow you to do reuse code.
+Code reuse is a beautiful, beautiful thing! Next up, we'll construct a function
+to encode the raw text of a plaintext url."""
+
+def getTextFromURL(url):
+    response = request.urlopen(url)
+    """ This executes a command to retrieve the file at that URL and stores the 
+    result in a variable name. """
+
+    raw = response.read().decode('utf8')
+    """ This parses the result into some raw text. The utf8 argument string in 
+    the 'decode()' portion refers to the character encoding. """
+
+    return(raw)
+
+
