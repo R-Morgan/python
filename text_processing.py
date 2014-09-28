@@ -66,7 +66,7 @@ list sentsdivided."""
 function to calculate the mean sentence length. We will build this up modularly
 from smaller functions"""
 
-def norm_text (sent_tokens):
+def normtext (sents):
 
 """ Defines function name and argument structure.  The function takes one
 argument called 'sent_tokens', which should a list of sentences."""
@@ -74,9 +74,14 @@ argument called 'sent_tokens', which should a list of sentences."""
     result = []        
 """ Initialises an empty list to store the output of the for loop  """
 
-    for s in sent_tokens:
+    for s in sents:
         lst = [w.lower() for w in s if w.isalpha()]
-        """ List comprehension """
+        """ List comprehension. w.lower() is executed 
+        for each w in s, provided that w.isalph() 
+        evaluates to True. """
+
         result.append(lst)
-    
+        """ Appends lst to the the empty vector above"""
+
+   return(result) 
 
