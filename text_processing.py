@@ -84,4 +84,16 @@ argument called 'sent_tokens', which should a list of sentences."""
         """ Appends lst to the the empty vector above"""
 
    return(result) 
+   
+def meanlength(normed_sents):
 
+    lengths =  [len(sent) for sent in normed_sents] # Number of words in each
+                                                    # sentence
+
+    words = sum(lengths)                            # Sum of all lengths
+
+    sentences = len(normed_sents)                   # Number sentences
+
+    mean = (words / sentences)
+
+    return(mean)
