@@ -1,8 +1,32 @@
 # !/usr/bin/env python
 
+
+# Basic text processing script in python
+# Copyright (C) <2014>  <J. Arianna Morgan>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 """ Before playing with this code, I'd *highly* recommend installing python 3
 and bpython, a very slick python interpreter that will make trying out the code
-very easy."""
+very easy. 
+
+To use the functions in this script, make sure you are in the same directory as the script when
+you start bpython and then enter:
+
+from text_processing import * 
+
+into bpython. """
 
 import nltk, re, pprint           # imports several modules for text processing
 
