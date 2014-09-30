@@ -33,7 +33,12 @@ for tag in souped.find_all(True):
 """ The list comprehension and empty list + for loop have the same result,
 but  one takes quite a bit less typing """
 
+def get_tags(souped):
+    
+    each_tag = [tag.name for tag in souped.find_all(True)]
+    tag_set  = list(set(each_tag))
 
+return tag_set
 
 
 
