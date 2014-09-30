@@ -19,4 +19,25 @@ title_contents = souped.title.contents
 """ Extracts the contents of each title tag and assigns them to a list. """
 
 
+[tag.name for tag in souped.find_all(True)]
+
+""" This list comprehension finds all the tag names in 'souped' and outputs them
+as a list.  I <3 list comprehensions because they can take the place of for
+loops to some degree.  Consider the following: """
+
+result = []        # Empty list to collect the results
+
+for tag in souped.find_all(True):
+    result.append(tag.name) # Append each tag to result
+
+""" The list comprehension and empty list + for loop have the same result,
+but  one takes quite a bit less typing """
+
+
+
+
+
+    
+    
+
 
