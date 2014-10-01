@@ -38,10 +38,15 @@ def get_tags(souped):
     each_tag = [tag.name for tag in souped.find_all(True)]
     tag_set  = list(set(each_tag))
 
-return tag_set
+    return tag_set
 
 
-
+""" The get_tags() function extracts all unique tags from the document and
+outputs the result as a list. A neato thing about functions is that in their 
+body exists a whole little world.  'each-_tag' and 'tag_set' are special 
+variables that are said to exist within the 'local scope' of the function. One
+could have these variable names outside of the function, if for some reason it
+were necessary."""
     
     
 
